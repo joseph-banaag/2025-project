@@ -11,7 +11,7 @@
   --bar-width: 30px;
   --bar-height: 4px;
   --bar-spacing: 6.5px;
-  --foreground: #6e6b6b;
+  --text-color: #c7bbbb;
   --background: #7b9259;
   --animation-timing: 300ms ease-in-out;
   --dark-nightfall: #10002b;
@@ -22,7 +22,7 @@
   --light-purple: #9d4edd;
   --lavender: #c77dff;
   --light-lavender: #e0aaff;
-  --body-bg: #f4effa;
+  --nav-bar-color: #dbc8f3;
   --mystical-midnight: #1a1a2e;
   --deep-purple: #16213e;
   --royal-purple: #0f3460;
@@ -35,17 +35,13 @@
 body {
   margin: 0;
   overflow: hidden;
-  /* background-color: var(--dark-nightfall) !important; */
-  background: linear-gradient(90deg, var(--dark-nightfall), var(--nightfall-purple), var(--vivid-purple), var(--mystical-midnight-dream), var(--mystical-midnight-light));
+  background: linear-gradient(45deg, var(--dark-nightfall), var(--nightfall-purple), var(--vivid-purple), var(--mystical-midnight-dream), var(--mystical-midnight-light));
   background-size: 400% 400%;
   animation: gradientBG 15s ease infinite;
   color: var(--mystical-midnight) !important;
 }
 
 .nav-bg-dark {
-  /* background: linear-gradient(90deg, var(--dark-nightfall), var(--nightfall-purple), var(--vivid-purple), var(--mystical-midnight-dream), var(--mystical-midnight-light));
-  background-size: 400% 400%;
-  animation: gradientBG 15s ease infinite; */
   background-color: var(--dark-nightfall) !important;
 }
 
@@ -66,7 +62,7 @@ body {
 .nav-brand {
   font-weight: 700;
   letter-spacing: 2px;
-  color: var(--light-lavender) !important;
+  color: var(--nav-bar-color) !important;
 }
 
 
@@ -118,7 +114,7 @@ body {
 
 .nav-link {
   position: relative;
-  color: var(--light-lavender) !important;
+  color: var(--nav-bar-color) !important;
 }
 
 .nav-link::after {
@@ -135,8 +131,9 @@ body {
 
 .nav-link:hover::after {
   opacity: 1;
-
 }
+
+/* END OF NAVBAR */
 
 .img-frog {
   width: 300px;
@@ -156,5 +153,5 @@ body {
 }
 
 .about-text {
-  color: var(--foreground);
+  color: var(--text-color);
 }
