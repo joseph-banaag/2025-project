@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <!-- LINK TO BOOTSTRAP CSS (CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!-- LINK TO BOOTSTRAP JAVASCRIPT (CDN) -->
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+  <title>Joseph Banaag - Portfolio</title>
+</head>
+
+<body>
+
+  <nav class="navbar p-3 navbar-expand-lg p-lg-4 navbar-dark nav-bg-dark">
+    <div class="container">
+      <a class="navbar-brand text-uppercase nav-brand" href="#">Joseph Banaag</a>
+
+      <button class="navbar-toggler border-0 p-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <!-- <span class="navbar-toggler-icon"></span> -->
+
+        <!-- hamburger menu to x icon -->
+        <label class="hamburger-menu">
+          <input type="checkbox">
+        </label>
+
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto d-flex flex-row gap-3">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Education</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Others</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container gy-5">
+
+    <div class="col my-5 p-3 about-text">
+      <h1 class="text-center mt-5">Welcome to My Portfolio</h1>
+      <p class="text-center">This is a simple portfolio website built with HTML, CSS, and Bootstrap.</p>
+    </div>
+
+    <!-- glassmorphism -->
+    <div class="position-relative ">
+      <div class="position-absolute glassmorphism" style="height: 300px; width: 100%; top: 0; left: 0; z-index: 1;;">
+      </div>
+
+      <div class="position-absolute row my-5 personal-info-glass p-1 mx-1 position-absolute" style="z-index: 2;">
+        <div class="col text-center ">
+          <img src="/images/racing-frog.jpg" class="img-fluid img-frog" alt="profile picture">
+        </div>
+        <div class="col personal-info about-text">
+          <h2>About Me</h2>
+          <p>Hello! I'm Joseph Banaag, a passionate developer with a love for creating beautiful and functional web
+            applications. I enjoy learning new technologies and improving my skills.</p>
+        </div>
+      </div>
+    </div>
+
+
+
+  </main>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,160 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* CSS VARIABLES */
+:root {
+  --bar-width: 30px;
+  --bar-height: 4px;
+  --bar-spacing: 6.5px;
+  --foreground: #6e6b6b;
+  --background: #7b9259;
+  --animation-timing: 300ms ease-in-out;
+  --dark-nightfall: #10002b;
+  --nightfall-purple: #240046;
+  --vivid-purple: #3c096c;
+  --electric-purple: #5a189a;
+  --bright-purple: #7b2ff7;
+  --light-purple: #9d4edd;
+  --lavender: #c77dff;
+  --light-lavender: #e0aaff;
+  --body-bg: #f4effa;
+  --mystical-midnight: #1a1a2e;
+  --deep-purple: #16213e;
+  --royal-purple: #0f3460;
+  --soft-lavender: #eae2f8;
+  --pastel-purple: #cdb4db;
+  --mystical-midnight-dream: #2f184b;
+  --mystical-midnight-light: #532b88;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  /* background-color: var(--dark-nightfall) !important; */
+  background: linear-gradient(90deg, var(--dark-nightfall), var(--nightfall-purple), var(--vivid-purple), var(--mystical-midnight-dream), var(--mystical-midnight-light));
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  color: var(--mystical-midnight) !important;
+}
+
+.nav-bg-dark {
+  /* background: linear-gradient(90deg, var(--dark-nightfall), var(--nightfall-purple), var(--vivid-purple), var(--mystical-midnight-dream), var(--mystical-midnight-light));
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite; */
+  background-color: var(--dark-nightfall) !important;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.nav-brand {
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--light-lavender) !important;
+}
+
+
+.hamburger-menu {
+  display: flex;
+  flex-direction: column;
+  gap: var(--bar-spacing);
+  width: max-content;
+}
+
+.hamburger-menu input {
+  appearance: none;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  pointer-events: none;
+  cursor: pointer;
+}
+
+.hamburger-menu::before,
+.hamburger-menu::after,
+.hamburger-menu input {
+  content: '';
+  width: var(--bar-width);
+  height: var(--bar-height);
+  background-color: var(--light-lavender);
+  transform-origin: left center;
+  border-radius: 9999px;
+  transition: opacity var(--animation-timing), width var(--animation-timing);
+}
+
+.hamburger-menu input:checked {
+  opacity: 0;
+  width: 0;
+}
+
+
+.hamburger-menu:has(input:checked)::before {
+  rotate: 45deg;
+  transition: 400ms ease-in-out;
+  margin-right: -10px;
+}
+
+.hamburger-menu:has(input:checked)::after {
+  rotate: -45deg;
+  transition: 200ms ease-in-out;
+  margin-right: -10px;
+}
+
+.nav-link {
+  position: relative;
+  color: var(--light-lavender) !important;
+}
+
+.nav-link::after {
+  content: '';
+  transition: all 0.2s;
+  opacity: 0;
+  height: 2px;
+  width: 100%;
+  background-color: var(--light-purple);
+  position: absolute;
+  bottom: 8px;
+  left: 0;
+}
+
+.nav-link:hover::after {
+  opacity: 1;
+
+}
+
+.img-frog {
+  width: 300px;
+  height: 300px;
+  border-radius: 999px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.glassmorphism {
+  background: var(--mystical-midnight-dream);
+  border-radius: 16px;
+  box-shadow: 20px 40px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  opacity: 0.4;
+}
+
+.about-text {
+  color: var(--foreground);
+}
